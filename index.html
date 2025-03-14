@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <!-- This is where styling info will go -->
+    <style>
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Zoe Gaidmore</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="active"  href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li> <a href="organizations.html">Organizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <!--
+    <search>
+        <form action = "./search/">
+            <input type="text" id="search-input" name="q" placeholder="Search the site here...">
+        </form>
+
+    </search>
+    -->
+
+    <main>
+        <hgroup>
+            <h2>About Me</h2>
+            <p>All things Zoe!</p>
+        </hgroup>
+
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+            <noscript>
+                <p>This feature requires JavaScript to be turned on to work.</p>
+            </noscript>
+        </label>
+        
+        
+
+        
+
+        <!-- <dialog open>Hi!</dialog> -->
+
+        <div class = "Bio">
+
+            <img class="bio_pic" src="bio_pic.jpeg" alt="An image of me, standing in front of a white brick wall." loading="lazy" style="width:345px;height:460px;">
+
+            <p>
+                I'm <span style="color:#fe1d79">Zoe Gaidmore</span>, a second year at the University of California, San Diego. I'm majoring 
+                in computer science, and minoring in business. After I graduate, I hope to work in software development.
+                I am also passionate about helping others learn about computer science. I started a club at an 
+                elementary school in my hometown that was dedicated to helping elementary school students learn
+                about coding. I also worked at a summer school which aimed to provide supplemental education to low-income
+                children in my community, in math, science, and coding. Lastly, I am an Instructional Assistant here at 
+                UCSD, and am the director of Academics for Pi Beta Phi.
+                <br><br>
+                Outside of school, I enjoy various hobbies. I like to work out, whether it's a cycling class, hot yoga,
+                or hike. I also enjoy reading, baking, and watching reality TV. I have golfed and Irish danced all my life.
+                Overall, I love spending my free time with my friends, family, and Basset Hound Bella. 
+            </p>
+
+        </div>
+
+        <aside>
+            <h4>My favorite thigs:</h4>
+            <ol>
+                <li>My friends and family</li>
+                <li><del>Salad</del> <ins>Candy</ins></li>
+                <li>The beach</li>
+                <li>The color pink</li>
+            </ol>
+        </aside>
+
+
+        <p>Here is an Elle Woods quote that inspires me:</p>
+        <blockquote>
+            "What, like it's hard?"
+        </blockquote>
+        <p><cite>Legally Blonde</cite> directed by Robert Luketic. Released in 2001.</p>
+
+    
+        
+
+        
+        
+        <p>You can use <kbd>Cmd</kbd> + <kbd>F</kbd> to search the website (on Mac OS)</p>
+
+        <hello-world></hello-world>
+
+        <script>
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    console.log('Hello world!');
+                }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
+
+
+    </main>
+
+    <footer>
+
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+
+</body>
+
+
+
+</html> 

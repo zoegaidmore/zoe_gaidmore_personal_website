@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <!-- This is where styling info will go -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Education</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="organizations.html">Organizations</a></li>
+            <li><a class="active" href="education.html">Education</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <main class = "education">
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        <text-square class="Petaluma High">
+            <h2>Petaluma High School</h2>
+
+            <img src="grad_gown.jpeg" alt="Me in my graduation gown, on a bench in a dried grass field." loading="lazy" style="width:300px;height:300px;">
+
+            <p>
+                Petaluma High School (PHS) is a high school in Petaluma, California. It's most notable for having one of the 
+                two student run wildlife museums in the country. This museum has animals, from reptiles to chinchillas, 
+                and exhibits to educate students and the public. PHS also has outstanding Agriculture classes, including 
+                mechanics, welding, and ag. 
+            </p>
+
+            <p class="bragging">
+                Graduated 2023 as Valedictorian (class rank 1 of 350). 
+            </p>
+            <figure>
+                <video width="320" height="240" controls>
+                    <source src="grad_speech.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Here is a clip from my Valedictorian speech at graduation.</figcaption>
+            </figure>
+
+        </text-square>
+
+        
+
+        <text-square class="UCSD" id="education-text-square">
+            <h2>University of California, San Diego</h2>
+
+            <p>UCSD is a public university in La Jolla, California.</p>
+
+            <p>
+                <b>Major: </b>Computer science
+                <br>
+                <b>Minor: </b>Business
+                <br>
+                <b>Year: </b>Second Year
+                <br>
+                <b>Expected Graduation: </b>June 2027
+                <br>
+                <b>GPA: </b>3.9
+            </p>
+
+            <br><br>
+
+
+            <table>
+                <caption><b>Classes I've taken and the skills they've given me:</b></caption>
+                <colgroup>
+                    <col span="1" width="100">
+                    <col span="2" width="500">
+                </colgroup>
+                <tr>
+                  <th>Class Code</th>
+                  <th>Class Name</th>
+                  <th>Skills</th>
+                </tr>
+                <tr>
+                    <td>CSE 12</td>
+                    <td>Basic Data Structures and Object-Oriented Design</td>
+                    <td>Data Structures, ADTs, Java, Programming Assignments.</td>
+                </tr>
+                <tr>
+                    <td>CSE 30</td>
+                    <td>Computer Organization</td>
+                    <td>C, ARM/Assembly, computer organization.</td>
+                </tr>
+                <tr>
+                    <td>CSE 100</td>
+                    <td>Advanced Data Structures</td>
+                    <td>C++, Data Structures, Advanced Data Types, Programming Assignments.</td>
+                </tr>
+                <tr>
+                    <td>CSE 101</td>
+                    <td>Design and Analysis of Algorithms</td>
+                    <td>Algorithms, time complexity, recursion</td>
+                </tr>
+                <tr>
+                    <td>CSE 110</td>
+                    <td>Software Engineering</td>
+                    <td>The process of talking to customers about software. Android Studio.</td>
+                </tr>
+            </table>
+        </text-square>
+
+        
+
+    </main>
+
+    <footer>
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <!-- This is where styling info will go -->
+    <style>
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="contact.html">Contact Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li> <a href="organizations.html">Organizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="contact">
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        <img class="contact_pic" src="contact_me_pic.jpeg" alt="An image of me, standing in the shade underneath trees." loading="lazy" style="width:346px;height:460px;">
+
+        <h3>Zoe Gaidmore</h3>
+        <p>zgdublin@gmail.com</p>
+
+        <div class="Contact_links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/zoe-gaidmore-90008829a/">Linkedin</a></li>
+                <li><a href="https://github.com/zoegaidmore">GitHub</a></li>
+                <li><a href="https://www.instagram.com/zoe.gaidmore/?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr#">Instagram</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <hr>
+
+    <h3>Or, fill out this contact form with any comments you have!</h3>
+    <details>
+        <summary>About the Form:</summary>
+        <p>
+            This form allows website viewers to submit their name and information, and provide comments 
+            on this website. 
+        </p>
+    </details>
+
+
+
+    <form id = "myForm" action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <label for="fname">First name:<req>*</req></label>
+            <input type="text" id="fname" name="fname" required minlength="2" maxlength="30">
+            <span class="error" id="fnameError"></span><br>
+            <span class="info" id="fnameInfo"></span><br><br>
+
+            <label for="lname">Last name:<req>*</req></label>
+            <input type="text" id="lname" name="lname" required minlength="2" maxlength="30">
+            <span class="error" id="lnameError"></span><br>
+            <span class="info" id="lnameInfo"></span><br><br>
+        </fieldset>
+
+        <br><br>
+
+        <label for="email">Email:<req>*</req></label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <span class="error" id="emailError"></span>
+        <span class="info" id="emailInfo"></span>
+        <br>
+
+
+        <label for="comments">Comments:<req>*</req></label><br>
+        <textarea id="comments" name="comments" rows="4" required minlength="1" maxlength="200" pattern="[A-Za-z0-9 .,!?'-]+"></textarea>
+        <span class="error" id="commentsError"></span>
+        <span class="info" id="commentsInfo"></span><br><br>
+
+        <br><br><br>
+
+        <input type="hidden" name="possible_bot" value="true">
+
+        <input type="hidden" name="form-errors" id="form-errors">
+
+        <button type="submit">Submit</button>
+        
+    </form>
+
+    <hr>
+
+    <address>
+        Written by <a href="mailto:zgdublin@gmail.com">Zoe Gaidmore</a>.<br>
+        Visit us at:<br>
+        9450 Gilman Drive<br>
+        La Jolla, CA<br>
+        USA
+    </address>
+
+    <footer>
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+
+
+
+</html> 

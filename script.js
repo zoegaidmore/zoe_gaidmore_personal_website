@@ -54,11 +54,27 @@ customElements.define("project-card", ProjectCard);
 
 // now, getting card content from json file:
 
-function loadLocally() {
+async function loadLocally() {
     const container = document.querySelector(".card-container");
 
     // using localStorage API to get the json content
     let cards = JSON.parse(localStorage.getItem("cards")) || [];
+
+    // if using netlify or something, you have to go directly to cards.json 
+    if (!cards.length) {
+        // If there's no data in localStorage, fetch it from cards.json
+        try {
+            const response = await fetch("/cards.json");
+            if (!response.ok) {
+                throw new Error("Failed to fetch cards.json");
+            }
+            cards = await response.json();
+            localStorage.setItem("cards", JSON.stringify(cards)); // Store the fetched data into localStorage
+        } catch (error) {
+            console.error("Error loading cards:", error);
+        }
+    }
+
   
     cards.forEach((cardData) => {
         const card = document.createElement("project-card");

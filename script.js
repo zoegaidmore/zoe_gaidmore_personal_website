@@ -69,6 +69,13 @@ function loadLocally() {
         card.setAttribute("link", cardData.link);
         container.appendChild(card);
     });
+
+    const btn = document.querySelector(".hide-cards");
+    btn.innerHTML = `
+        <button onclick="hideCards()">Hide Cards</button>
+        `;
+    
+    setSavedTheme();
   }
 
   async function loadRemote() {
@@ -96,12 +103,27 @@ function loadLocally() {
             card.setAttribute("link", cardData.link);
             container.appendChild(card);
         });
+
+        const btn = document.querySelector(".hide-cards");
+        btn.innerHTML = `
+            <button onclick="hideCards()">Hide Cards</button>
+            `;
+
+        setSavedTheme();
         
     } catch (error) {
         console.error("Error fetching JSON data:", error);
     }
 }
 
+
+// hides the cards
+function hideCards() {
+    const container = document.querySelector(".card-container");
+    container.innerHTML = '';
+    const btn = document.querySelector(".hide-cards");
+    btn.innerHTML = '';
+}
 
 
 // light and dark modes

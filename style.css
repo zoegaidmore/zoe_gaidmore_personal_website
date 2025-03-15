@@ -338,3 +338,17 @@ req {
     color: red;
     font-weight: bold;
 }
+
+.social-img {
+    border: none;
+    width: 5vw; 
+    height: 5vw;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.contact_links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

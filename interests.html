@@ -94,43 +94,20 @@
             <text-square class="Music">
                 <h3>Music</h3>
 
-                <canvas id="myCanvas">
-                    Your browser does not support the canvas tag.
-                </canvas>
-                    
-                <!--I know its more than 15 lines, but it's the same thing 3 times to make 3 shapes-->
-                <script>
-                    let canvas = document.getElementById("myCanvas");
-                    let ctx = canvas.getContext("2d");
-
-                    ctx.beginPath(); 
-                    ctx.arc(70, 70, 50, 0, Math.PI * 2);
-                    ctx.fillStyle = 'black'; 
-                    ctx.fill(); 
-                    ctx.closePath(); 
-
-                    ctx.beginPath(); 
-                    ctx.arc(70, 70, 25, 0, Math.PI * 2);
-                    ctx.fillStyle = 'pink'; 
-                    ctx.fill(); 
-                    ctx.closePath(); 
-
-                    ctx.beginPath(); 
-                    ctx.arc(70, 70, 10, 0, Math.PI * 2);
-                    ctx.fillStyle = 'white'; 
-                    ctx.fill(); 
-                    ctx.closePath(); 
-                </script>
-                <noscript>Your browser does not support JavaScript!</noscript>
-
-                <p>I collect vinyl records!</p>
-
                 <svg width="150" height="150">
                     <circle cx="70" cy="70" r="50" fill="black" />
                     <circle cx="70" cy="70" r="25" fill="pink" />
                     <circle cx="70" cy="70" r="10" fill="white" />
                 </svg>
 
+                <p>I collect vinyl records!</p>
+
+                
+                <div class="album-covers">
+                    <img src="ts-album.png" alt="Taylor Swift's Speak Now album cover" class="active-album">
+                    <img src="lz-album.jpg" alt="Led Zeppelin I album cover">
+                    <img src="fmac-album.png" alt="Fleetwood Mac Rumors album cover">
+                </div>
                 
                 <p>My favorite types of music:</p>
                 <dl>

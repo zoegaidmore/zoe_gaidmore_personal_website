@@ -295,3 +295,20 @@ function hideContent() {
     const codeBlock = document.getElementById('code-block');
     codeBlock.innerHTML = '';
 }
+
+
+
+//code for fading images in music section of interests
+
+document.addEventListener("DOMContentLoaded", function() { 
+    let currentIndex = 0; // Start with the first image
+    const pics = document.querySelectorAll('.album-covers img'); 
+
+    function changeImage() {           
+        pics[currentIndex].classList.remove('active-album');         
+        currentIndex = (currentIndex + 1) % pics.length;
+        pics[currentIndex].classList.add('active-album');
+    }
+
+    setInterval(changeImage, 3000);
+});

@@ -1,11 +1,4 @@
 # Part 3:
 ## What enhancements I made to my site:
 
-### Change #1(?):
-I’m not entirely sure if this change counts, because it was made regarding the first part of this HW 5 assignment. After making the project-cards, I made sure that the cards matched my site being in light or dark mode: I changed the background and text color on the cards depending on the mode, to ensure that they were cohesive with the rest of the project. 
-
-### Change #2:
-Previously, on the Contact page of my site, I had a list of links to social media. I changed these links to be images of the social media logo, which act as links and take the user to my account when pressed.
-
-### Change #3:
-I added functionality to a "Show Code" button on my Projects page, which I had created during HW 1. Now, when pressed, the button calls a javascript function in my script.js file and shows a block of code! I then added a "Hide Code" button which appears with the code block, and calls a javascript function to hide the code again when it is pressed. 
+I’m not entirely sure if this first change counts because it was made regarding the first part of this HW 5 assignment. After making the project-cards, I made sure that the background and text color of my cards matched my site being in light or dark mode. I did this so that it would be more cohesive with the rest of my site. The next change I made was to the list of links to social media that I have on my Contacts page. I changed these links to be images of the social media logo, which act as links and take the user to my account when pressed, which I felt elevated my site. Thirdly, I added functionality to a "Show Code" button on my Projects page, which I had created during HW 1. Now, when pressed, the button calls a javascript function in my script.js file and shows a block of code! I then added a "Hide Code" button which appears with the code block, and calls a javascript function to hide the code again when it is pressed (because it felt wrong to have the button to make the code show, and then for there to be no way to make the code dissapear again). But, the change that I'm possibly most proud of is to the "Music" section of my Interests page: I created an image that switches between my favorite albums's covers, using HTML, CSS, and JavaScript! Lastly, I made minor tweaks to layouts of my pages, for example, making sure that all of my grey text boxes on my Interests page were aligned and the same height.

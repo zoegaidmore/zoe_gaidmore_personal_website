@@ -243,6 +243,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // function to count down remaining characters in comments
     function updateCharacterCount() {
+        if(!comments) {
+            return;
+        }
+
         const charsRemaining = MAX_COMMENT_LENGTH - comments.value.length;
 
         commentsInfo.textContent = `${charsRemaining} characters remaining`;
@@ -256,7 +260,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    comments.addEventListener("input", updateCharacterCount);
+    if (comments) {
+        comments.addEventListener("input", updateCharacterCount);
+    }
+
+    // comments.addEventListener("input", updateCharacterCount);
     updateCharacterCount();
 
     // function to validate fields based on requirements 
@@ -277,8 +285,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function preventInvalidInput(field, errorElement, pattern, customMessage) {
+ 
         field.addEventListener("input", function (event) {
+
             let value = field.value;
+
             if (!pattern.test(value) && value.length > 0) {
                 field.classList.add("flash"); 
                 errorElement.textContent = customMessage;
@@ -349,7 +360,7 @@ function hideContent() {
 
 document.addEventListener("DOMContentLoaded", function() { 
     let currentIndex = 0; // Start with the first image
-    const pics = document.querySelectorAll('.album-covers img'); 
+    const pics = Array.from(document.querySelectorAll('.album-covers img')); 
 
     function changeImage() {           
         pics[currentIndex].classList.remove('active-album');         

@@ -92,12 +92,13 @@ html {
 body {
     font-family: 'MyFont', "PT Sans", sans-serif;
     /* PT Sans is a backup if the custom font does not load */
-    padding: 5px;
+    padding: 0px;
 }
 
 header {
     background-color: var(--light-pink-color);
     padding: 5px;
+    margin: 0px;
 }
   
 h1 {

@@ -62,14 +62,13 @@ async function loadLocally() {
 
     // if using netlify or something, you have to go directly to cards.json 
     if (!cards.length) {
-        // If there's no data in localStorage, fetch it from cards.json
         try {
             const response = await fetch("/cards.json");
             if (!response.ok) {
                 throw new Error("Failed to fetch cards.json");
             }
             cards = await response.json();
-            localStorage.setItem("cards", JSON.stringify(cards)); // Store the fetched data into localStorage
+            localStorage.setItem("cards", JSON.stringify(cards)); 
         } catch (error) {
             console.error("Error loading cards:", error);
         }

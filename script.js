@@ -23,6 +23,9 @@ class ProjectCard extends HTMLElement {
         }
         a {
             color: var(--main-pink-color);
+        }
+        a:hover {
+            color: var(--darker-pink-color);
         }`;
 
         const template = document.createElement("div");

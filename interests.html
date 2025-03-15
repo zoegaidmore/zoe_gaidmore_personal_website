@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <!-- This is where styling info will go -->
+    <style>
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Interests</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li> <a href="organizations.html">Organizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a class="active" href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        <section class = "interestsStatement">
+            <p>I <strong>love</strong> dance, golf, music, nature, and <strong>so much</strong> more!</p>
+        </section>
+
+        <section class="interests">
+
+            <text-square class="Dance">
+
+                <h3>Irish Dance</h3>
+                <p> 
+                    <drn>Irish Dance</drn> is a traditional dance form that originated in Ireland.
+                    <br>
+                    I have been Irish dancing since I was 5 years old. I competed in local, state, and national
+                    competitions both solo and as a part of a team. My mother is an immigrant from Ireland, so
+                    I have been dancing to stay connected to that culture. 
+                </p>
+
+                <p>Here is an example of an Irish dance song!</p>
+
+                <audio controls>
+                    <source src="irish_jig.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+
+                <p>And here is an image of me and my team at the Western U.S. region Oireachtas, 2023!</p>
+                <img src="dance_team.jpeg" alt="8 Girls wearing red dresses and dark brown wigs." loading="lazy" style="width:234;height:268px;">
+            </text-square>
+
+            
+
+            <text-square class="Golf">
+                <h3>Golf</h3>
+
+                <p>In high school, I was on the girls golf team, and was captain my senior year.</p>
+
+                <p>I love to golf with my dad, and we're members of the small country club in our hometown.</p>
+
+                <img src="golf.jpeg" alt="Me and two girls standing on grass wearing our high school golf uniforms." loading="lazy" style="width:336px;height:448px;">
+                
+            </text-square>
+
+            
+
+            <text-square class="Music">
+                <h3>Music</h3>
+
+                <canvas id="myCanvas">
+                    Your browser does not support the canvas tag.
+                </canvas>
+                    
+                <!--I know its more than 15 lines, but it's the same thing 3 times to make 3 shapes-->
+                <script>
+                    let canvas = document.getElementById("myCanvas");
+                    let ctx = canvas.getContext("2d");
+
+                    ctx.beginPath(); 
+                    ctx.arc(70, 70, 50, 0, Math.PI * 2);
+                    ctx.fillStyle = 'black'; 
+                    ctx.fill(); 
+                    ctx.closePath(); 
+
+                    ctx.beginPath(); 
+                    ctx.arc(70, 70, 25, 0, Math.PI * 2);
+                    ctx.fillStyle = 'pink'; 
+                    ctx.fill(); 
+                    ctx.closePath(); 
+
+                    ctx.beginPath(); 
+                    ctx.arc(70, 70, 10, 0, Math.PI * 2);
+                    ctx.fillStyle = 'white'; 
+                    ctx.fill(); 
+                    ctx.closePath(); 
+                </script>
+                <noscript>Your browser does not support JavaScript!</noscript>
+
+                <p>I collect vinyl records!</p>
+
+                <svg width="150" height="150">
+                    <circle cx="70" cy="70" r="50" fill="black" />
+                    <circle cx="70" cy="70" r="25" fill="pink" />
+                    <circle cx="70" cy="70" r="10" fill="white" />
+                </svg>
+
+                
+                <p>My favorite types of music:</p>
+                <dl>
+                    <dt>Classic Rock</dt>
+                    <dd>I love Led Zeppelin, Grateful Dead, and the Eagles.</dd>
+                    <dt>Country</dt>
+                    <dd>I love Megan Moroney, Jon Pardi, and Zach Top.</dd>
+                    <dt>Pop</dt>
+                    <dd>I love Taylor Swift, Sabrina Carpenter, and Tate McRae.</dd>
+                </dl>
+
+            </text-square>
+
+        </section>
+
+            <div class="Nature">
+                <h3>Nature</h3>
+
+                <picture>
+
+                    <img src="nature1.jpeg" alt="Lake Croagh Patrick in Ireland" loading="lazy" style="width:356px;height:460px;">
+                    <img src="nature2.jpeg" alt="View from Mount Tamalpais in NorCal" loading="lazy" style="width:356px;height:460px;">
+                    <img src="nature3.jpg" alt="Turtle seen in Kona, HI" loading="lazy" style="width:356px;height:460px;">
+                    <img src="nature4.jpeg" alt="Me hiking Cascade Falls, Mount Tamalpais" loading="lazy" style="width:356px;height:460px;">
+                    <img src="nature5.jpeg" alt="View from Mount Soledad, San Diego" loading="lazy" style="width:356px;height:460px;">
+                    <img src="nature6.jpeg" alt="Gliderport, La Jolla" loading="lazy" style="width:356px;height:460px;">
+
+
+                </picture>
+
+            </div>
+
+    </main>
+
+    <footer>
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+    
+</body>
+
+
+
+</html> 

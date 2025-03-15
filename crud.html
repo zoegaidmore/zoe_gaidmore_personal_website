@@ -49,6 +49,10 @@
         <h1>CRUD actions</h1>
     </header>
 
+    <label class="switch">
+        <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+    </label>
+
     <a href="project-cards.html"><button>Return to Project Cards</button></a>
 
     <div class = "forms-container">
@@ -177,6 +181,8 @@
             btn.innerHTML = `
                 <button onclick="hideCrudCards()">Hide Cards</button>
             `;
+
+            setSavedTheme();
 
         }
 

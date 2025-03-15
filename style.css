@@ -18,6 +18,7 @@
 
     --bg-color2-light: #f5f5f5;
     --bg-color2-dark: #333;
+
 }
 
 html {
@@ -26,6 +27,27 @@ html {
     color: var(--text-color-light);
        
 }
+
+/* For Custom Project Cards! */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  project-card {
+    display: block;
+    background-color: var(--bg-color2-light);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
 
 #themeToggle {
     border: none;

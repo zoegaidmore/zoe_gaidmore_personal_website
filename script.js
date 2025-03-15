@@ -1,6 +1,83 @@
 LIGHT_SRC = "moon.png"
 DARK_SRC = "sun.png"
 
+
+// Project-Cards
+class ProjectCard extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+    
+        const style = document.createElement("style");
+        style.textContent = `
+        :host {
+            display: block;
+            background-color: var(--bg-color2-light);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        } 
+        picture img {
+            width: 100%;
+        }
+        a {
+            color: var(--main-pink-color);
+        }`;
+
+        const template = document.createElement("div");
+        template.innerHTML = `
+        <h2></h2>
+        <picture>
+            <img src="" alt="">
+        </picture>
+        <p></p>
+        <a href="" target="_blank">Learn More</a>
+        `;
+        this.shadowRoot.append(style, template);
+    }
+    connectedCallback() {
+        this.shadowRoot.querySelector("h2").innerText = this.getAttribute("title");
+        this.shadowRoot.querySelector("img").src = this.getAttribute("image");
+        this.shadowRoot.querySelector("img").alt = this.getAttribute("alt");
+        this.shadowRoot.querySelector("p").innerText = this.getAttribute("description");
+        this.shadowRoot.querySelector("a").href = this.getAttribute("link");
+    }
+}
+    
+customElements.define("project-card", ProjectCard);
+
+
+
+// now, getting card content from json file:
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const container = document.querySelector(".card-container");
+  
+    // Fetch JSON data
+    let cards = JSON.parse(localStorage.getItem("cards")) || [];
+  
+    if (!cards.length) {
+      const response = await fetch("cards.json");
+      cards = await response.json();
+      localStorage.setItem("cards", JSON.stringify(cards));
+    }
+  
+    cards.forEach((cardData) => {
+        const card = document.createElement("project-card");
+        card.setAttribute("title", cardData.title);
+        card.setAttribute("image", cardData.image);
+        card.setAttribute("alt", cardData.alt);
+        card.setAttribute("description", cardData.description);
+        card.setAttribute("link", cardData.link);
+        container.appendChild(card);
+    });
+  });
+
+
+
+// light and dark modes
+
 function setTheme(theme) {
     const root = document.documentElement;
     const toggle = document.getElementById('themeToggle');
@@ -8,6 +85,8 @@ function setTheme(theme) {
     let textSquares = document.querySelectorAll('text-square');
 
     let forms = document.querySelectorAll('form');
+
+    let cards = document.querySelectorAll('project-card');
 
     if (theme === 'dark'){
         root.style.setProperty('background', 'var(--bg-color-dark)');
@@ -20,6 +99,10 @@ function setTheme(theme) {
 
         forms.forEach(function(form) {
             form.style.setProperty('background', 'var(--bg-color2-dark)');
+        });
+
+        cards.forEach(function(cards) {
+            cards.style.setProperty('background', 'var(--bg-color2-dark)')
         });
 
         toggle['src'] = DARK_SRC;
@@ -35,6 +118,10 @@ function setTheme(theme) {
 
         forms.forEach(function(form) {
             form.style.setProperty('background', 'var(--bg-color2-light)');
+        });
+
+        cards.forEach(function(cards) {
+            cards.style.setProperty('background', 'var(--bg-color2-light)')
         });
 
         toggle['src'] = LIGHT_SRC;
@@ -66,6 +153,7 @@ document.addEventListener('DOMContentLoaded', setSavedTheme);
 
 
 
+// FORM
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("myForm");

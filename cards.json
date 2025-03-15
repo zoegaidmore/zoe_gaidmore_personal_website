@@ -1,0 +1,44 @@
+[
+    {
+      "title": "Lake Croagh Patrick",
+      "image": "nature1.jpeg",
+      "alt": "Lake Croagh Patrick in Ireland",
+      "description": "This is an image on Lake Croagh Patrick, found in County Mayo, Ireland. I traveled here with my family during winter of 2024/2025, to visit family! This is a Holy Mountain: it has a small church at the peak, and some Catholics take religious pilgramages, hiking to the top!",
+      "link": "https://www.mayo.ie/attractions/croagh-patrick"
+    },
+    {
+        "title": "Mount Tamalpais",
+        "image": "nature2.jpeg",
+        "alt": "View from Mount Tamalpais in NorCal",
+        "description": "Mount Tamalpais is a mountain in Northern California, near my hometown! My friends and I love to take hikes or go on picnics on this mountain in the summertime!",
+        "link": "https://www.parks.ca.gov/?page_id=471"
+    },
+    {
+        "title": "A sea turtle in Kona, Hawaii",
+        "image": "nature3.jpg",
+        "alt": "Turtle seen in Kona, HI",
+        "description": "Over spring break in 2024, my friends and I had the opportunity to visit Kona, Hawaii! We saw a beautiful sea turtle in the water on our way to a snorkeling boat!",
+        "link": "https://bigislandguide.com/big-island-beaches-sea-turtles"
+    },
+    {
+        "title": "Cascade Falls",
+        "image": "nature4.jpeg",
+        "alt": "Me hiking Cascade Falls, Mount Tamalpais",
+        "description": "Mount Tamalpais, a mountain in Northern California, is a popuar spots for hiking and picnics. Cascade falls is one of the hikes that my friends and I like to explore, which leads to a beautiful waterfall!",
+        "link": "https://www.alltrails.com/trail/us/california/cascade-falls--7"
+    },
+    {
+        "title": "Mount Soledad",
+        "image": "nature5.jpeg",
+        "alt": "View from Mount Soledad, San Diego",
+        "description": "This image shows the view from Mount Soledad, a national veterans' memorial park in San Diego that has gorgeous views of the surrounding area!",
+        "link": "https://soledadmemorial.org/"
+    },
+    {
+        "title": "Gliderport",
+        "image": "nature6.jpeg",
+        "alt": "Gliderport, La Jolla",
+        "description": "Gliderport is a lookout above Black's Beach in La Jolla, bordering the UCSD campus. As a UCSD student, this is a regular lookout spot to watch a pretty sunset!",
+        "link": "https://www.flytorrey.com/"
+    }
+]

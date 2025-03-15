@@ -235,12 +235,13 @@ text-square {
 .interests {
     display: grid;                 
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 20px;                     
     padding: 20px;   
     width: 90dvw;  
     margin: 0;    
     justify-items: center; 
-    align-items: center;
+    align-items: stretch;
 }
 
 

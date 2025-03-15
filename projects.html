@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoe Gaidmore Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My personal website.">
+    <meta name="keywords" content="Zoe, Portfolio, Computer Science, UCSD">
+    <meta name="author" content="Zoe Gaidmore">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <!-- This is where styling info will go -->
+    <style>
+        pretty-footer {
+            display: block;
+            text-align: right;
+            font-family: Garamond, sans-serif;
+            color: white;
+            background: linear-gradient(to top, #f05f9c, #f8dbe8);
+            padding: 2em; 
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Projects</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+            <li><a href="organizations.html">Organizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <label class="switch">
+            <image src = "moon.png" id="themeToggle" onclick="toggleTheme()" width=50vh></image>
+        </label>
+
+        
+        <section class = "projects">
+
+        <text-square class = "dj">
+
+
+            <h3>I miss my DJ</h3>
+            <p>
+                Women In Computing is an organization at UCSD that supports women in the computer science field. As a 
+                member of this organization, me and a group created an interactive website called I Miss My DJ. This 
+                website won best interactive webstite out of all of the submissions for that quarter.
+            </p>
+
+        </text-square>
+
+
+        <text-square class = "syn">
+
+            <h3>Synthesis Research Project</h3>
+            <p>
+                As a part of the Syntehsis course series at UCSD, studnets have to do a research project. I completed
+                my project on how the climate change crisis affects crime rates, as well as the importance of policies
+                and policy education in fighting the climate change crisis. 
+            </p>
+            <a href="https://sites.google.com/ucsd.edu/zoe-gaidmore-syn-portfolio/home">Synthesis Portfolio</a>
+        </text-square>
+
+
+        <text-square class = "cogs">
+            <h3>Happiness Index versus Urbanization Data Analysis</h3>
+            
+            <p>
+                For COGS 108, a data science class at UCSD, I worked in a group to do research on happiness: what
+                factors lead to higher happiness in a country? The key factor that we wanted to analyze was urbanization, 
+                as we hypothesized that a higher proportion of a country living in an urban area would lead to higher
+                happiness in that country. However, through our analysis, we found that that isn't always the case. We
+                discovered that many factors, like a country's GDP, social support, life expectancy, and urbanization all
+                impacted a country's happiness.
+            </p>
+            <a href="https://github.com/zoegaidmore">GitHub</a>
+
+        </text-square>
+        </section>
+
+            <img src="cogs_project.png" alt="A screenshot from my project" style="width:425px;height:292px;">
+
+            <p>Want to see the code behind this graph? Press this button!</p>
+
+            <button onclick="showContent()">Press to see code!</button>
+
+            <template>
+                <pre><code>
+                    # Set Seaborn theme and font for consistent styling
+                    sns.set_theme(style='whitegrid')
+                    plt.rcParams['font.family'] = 'Georgia'
+                    plt.rcParams['axes.facecolor'] = '#f5f5f5' 
+
+
+                    # Create a scatter plot with regression line
+                    plt.figure(figsize=(10, 6)) # Set the figure size
+                    sns.regplot(
+                        x="Urban population (% of total population)", # X-axis: Urban population percentage
+                        y="Ladder score",  # Y-axis: Happiness index (Ladder score)
+                        data=merged_df, 
+                        line_kws={"color": sns.color_palette("Blues")[4], "linewidth": 2},  # Color of the regression line
+                        scatter_kws={"alpha": 0.6, "color": sns.color_palette("Blues", 1)[0]}  # Transparency of the scatter points
+                    )
+
+                    # Add axis labels and plot title
+                    plt.xlabel("Urban Population (% of total population)", fontsize=14, labelpad=10) # X-axis label
+                    plt.ylabel("Happiness Index (Ladder score)", fontsize=14, labelpad=10) # Y-axis label
+                    plt.title("Happiness Index vs Urban Population %", 
+                            fontsize=18, fontweight='bold', pad=15) # Plot title
+
+                    # Add grid lines and show plot
+                    plt.grid(color='gray', linestyle='--', linewidth=0.5)
+                    plt.show()
+                </code></pre>
+            </template>
+
+            <!-- Right now, the button will not do anything.
+            But, when we can add javascript, it will make the code
+            above appear on the site. This is where I will add javascript -->
+            <script></script>
+            <noscript>Your browser does not support JavaScript!</noscript>
+
+            
+    </main>
+
+    <footer>
+        <pretty-footer>Website made with love by: Zoe Gaidmore</pretty-footer>
+    </footer>
+    
+</body>
+
+
+
+</html> 

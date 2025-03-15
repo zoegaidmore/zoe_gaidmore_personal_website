@@ -54,17 +54,11 @@ customElements.define("project-card", ProjectCard);
 
 // now, getting card content from json file:
 
-document.addEventListener("DOMContentLoaded", async () => {
+function loadLocally() {
     const container = document.querySelector(".card-container");
-  
-    // Fetch JSON data
+
+    // using localStorage API to get the json content
     let cards = JSON.parse(localStorage.getItem("cards")) || [];
-  
-    if (!cards.length) {
-      const response = await fetch("cards.json");
-      cards = await response.json();
-      localStorage.setItem("cards", JSON.stringify(cards));
-    }
   
     cards.forEach((cardData) => {
         const card = document.createElement("project-card");
@@ -75,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         card.setAttribute("link", cardData.link);
         container.appendChild(card);
     });
-  });
+  }
 
 
 

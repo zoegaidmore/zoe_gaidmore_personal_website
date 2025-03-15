@@ -287,3 +287,11 @@ function showContent() {
     codeBlock.innerHTML = ''; 
     codeBlock.appendChild(clone); 
 }
+
+
+// function for hide code button
+function hideContent() {
+    const template = document.getElementById('code-template');
+    const codeBlock = document.getElementById('code-block');
+    codeBlock.innerHTML = '';
+}

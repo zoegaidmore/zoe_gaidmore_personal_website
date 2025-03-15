@@ -71,6 +71,37 @@ function loadLocally() {
     });
   }
 
+  async function loadRemote() {
+    const container = document.querySelector(".card-container");
+    // bin url
+    const url = "https://api.jsonbin.io/v3/b/67d5b6c78a456b79667663ad/latest";
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        console.log(data);  // testing
+
+        let cardArray = data.record.record;
+        cardArray.forEach((cardData) => {
+            const card = document.createElement("project-card");
+            card.setAttribute("title", cardData.title);
+            card.setAttribute("image", cardData.image);
+            card.setAttribute("alt", cardData.alt);
+            card.setAttribute("description", cardData.description);
+            card.setAttribute("link", cardData.link);
+            container.appendChild(card);
+        });
+        
+    } catch (error) {
+        console.error("Error fetching JSON data:", error);
+    }
+}
+
 
 
 // light and dark modes

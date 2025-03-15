@@ -276,3 +276,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+// Function for show code button
+function showContent() {
+    const template = document.getElementById('code-template');
+    const clone = document.importNode(template.content, true);
+    const codeBlock = document.getElementById('code-block');
+    codeBlock.innerHTML = ''; 
+    codeBlock.appendChild(clone); 
+}

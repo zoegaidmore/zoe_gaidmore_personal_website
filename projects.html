@@ -97,9 +97,9 @@
 
             <p>Want to see the code behind this graph? Press this button!</p>
 
-            <button onclick="showContent()">Press to see code!</button>
+            <button onclick="showContent()">Press to see code!</button> <br><br>
 
-            <template>
+            <template id="code-template">
                 <pre><code>
                     # Set Seaborn theme and font for consistent styling
                     sns.set_theme(style='whitegrid')
@@ -127,12 +127,13 @@
                     plt.grid(color='gray', linestyle='--', linewidth=0.5)
                     plt.show()
                 </code></pre>
+
             </template>
 
-            <!-- Right now, the button will not do anything.
-            But, when we can add javascript, it will make the code
-            above appear on the site. This is where I will add javascript -->
-            <script></script>
+
+            <div id="code-block"></div>
+
+            
             <noscript>Your browser does not support JavaScript!</noscript>
 
             

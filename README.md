@@ -1,4 +1,27 @@
-# Part 3:
-## What enhancements I made to my site:
+# Zoe Gaidmore's Personal Website
 
-I’m not entirely sure if these first changes count because they were made regarding the first parts of this HW 5 assignment. After making the project-cards, I made sure that the background and text color of my cards matched my site being in light or dark mode (it matches regarless of whether the cards were loaded locally or remotely). I also created a button "Hide Cards", which appears with the project cards and causes itself and the cards to disappear when clicked. I did this so that it would be more cohesive with the rest of my site. I did the same for my CRUD page, making sure the theme can be toggled correctly. The next change I made was to the list of links to social media that I have on my Contacts page. I changed these links to be images of the social media logo, which act as links and take the user to my account when pressed, which I felt elevated my site. Thirdly, I added functionality to a "Show Code" button on my Projects page, which I had created during HW 1. Now, when pressed, the button calls a javascript function in my script.js file and shows a block of code! I then added a "Hide Code" button which appears with the code block, and calls a javascript function to hide the code again when it is pressed (because it felt wrong to have the button to make the code show, and then for there to be no way to make the code dissapear again). But, the change that I'm possibly most proud of is to the "Music" section of my Interests page: I created an image that switches between my favorite albums's covers, using HTML, CSS, and JavaScript! Lastly, I made minor tweaks to layouts of my pages, for example, making sure that all of my grey text boxes on my Interests page were aligned and the same height.
+This is a personal website created as a project for CSE 134B: Web Client Languages at UC San Diego. The site is built using HTML, CSS, and JavaScript, and is designed to showcase both technical skills and personal background.
+
+The website includes information about my interests and education, along with interactive project cards that dynamically load content from a `.json` file — either locally or from a remote source — demonstrating my ability to work with data fetching and DOM manipulation in JavaScript.
+
+> This project is not currently deployed or hosted live.
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3 (Flexbox & Grid Layout)
+- JavaScript (Vanilla)
+- JSON (for dynamic content loading)
+
+---
+
+
+## Features
+
+- Responsive layout for desktop and mobile
+- Custom styling with CSS Grid and Flexbox
+- Dynamic "project cards" rendered from a JSON file
+- Clean, semantic HTML structure
+- Modular and maintainable code
